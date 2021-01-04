@@ -51,6 +51,12 @@ body {
       padding: 0.2em 0.5em;
       color: white;
       margin-right: 1em; }
+    .help__explanation i {
+      color: grey; }
+    .help__explanation--color {
+      background-color: rgba(147, 86, 220, 0.1); }
+      .help__explanation--color i {
+        color: #9356DC; }
 
 .header {
   width: 100%;

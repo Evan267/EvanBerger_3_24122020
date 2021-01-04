@@ -40,6 +40,15 @@
             color: white;
             margin-right: 1em;
         }
+        i{
+            color: grey;
+        }
+        &--color{
+            background-color: rgba($color-primary, .10);
+            i{
+                color: $color-primary;
+            }
+        }
     }
 }
 
