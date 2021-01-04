@@ -1,0 +1,23 @@
+.header{
+    width: 100%;
+    box-shadow: 0px 0.05em 0.5em grey;
+    background-color: white;
+    height: 65px;
+    padding-top: auto;
+    &__logo{
+        width:44%;
+        margin: auto;
+        img{
+            width:100%;
+            margin-top:20px;
+        }
+    }
+    &__previous{
+        position: absolute;
+        top: 0.85em;
+        left: 1em;
+        border: none;
+        background-color: white;
+        font-size: 1.5em;
+    }
+}

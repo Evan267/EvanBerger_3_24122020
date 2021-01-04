@@ -1,0 +1,45 @@
+
+
+.location{
+    &__current{
+        width:100%;
+        padding: 15px 0px;
+        text-align: center;
+        i{
+            margin-right: 18px;
+        }
+    }
+    &__explorate{
+        background-color: #ececec;
+        text-align: center;
+        @include padding;
+        button{
+            background: linear-gradient( 0deg, $color-primary, $color-secondary);
+            padding: 1em;
+            border: none;
+            border-radius: 2em;
+            color: white;
+            box-shadow: 0px 0.05em 0.5em grey;
+        }
+    }
+}
+
+.help{
+    @include padding;
+    background-color: white;
+    &__explanation{
+        box-shadow: 0px 0.05em 0.5em grey;
+        padding:0.8em 2em 1em;
+        border-radius: 1em;
+        span{
+            background-color: $color-primary;
+            position: absolute;
+            left: 0.4em;
+            border-radius:1em;
+            padding:0.2em 0.5em;
+            color: white;
+            margin-right: 1em;
+        }
+    }
+}
+
