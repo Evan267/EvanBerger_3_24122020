@@ -1,0 +1,11 @@
+.menu{
+    width: 100%;
+    background-color: $menu-background-color; 
+    &__image{
+        width: 100%;
+    }
+    & + div{
+        display: flex; 
+    }
+
+}
