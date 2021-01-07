@@ -10,24 +10,21 @@
         }
     }
     &__explorate{
-        @include padding;
-        @include background-grey;
+        padding: $padding;
+        background-color: $background-grey;
         text-align: center;
         button{
-            background: linear-gradient( 0deg, $color-primary, $color-secondary);
-            padding: 1em;
-            border-radius: 2em;
-            color: white;
-            @include box-shadow;
+            @include button;
         }
     }
 }
 
 .help{
-    @include padding;
+    padding: $padding;
     background-color: white;
     &__explanation{
-        @include box-shadow;
+        background-color: $background-grey2;
+        box-shadow: $box-shadow;
         padding:0.8em 2em 1em;
         border-radius: 1em;
         span{
@@ -52,8 +49,8 @@
 }
 
 .grid{
-    @include padding;
-    @include background-grey;
+    padding: $padding;
+    background-color: $background-grey;
     display: grid;
     grid-template-columns: auto;
     grid-template-rows: 1;
@@ -65,8 +62,9 @@
     width: 100%;
     height: 250px;
     border-radius: 1em;
-    @include box-shadow;
+    box-shadow: $box-shadow;
     position: relative;
+    background-color: white;
     &__image{
         width: 100%;
         height: 70%;

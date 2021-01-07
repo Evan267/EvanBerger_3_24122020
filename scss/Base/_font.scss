@@ -1,11 +1,20 @@
 @font-face{
     font-family: 'Shrikhand';
-    src: url('font/Shrikhand.ttf')
+    src: url('font/Shrikhand-Regular.ttf')
 }
 
 @font-face{
     font-family: 'Roboto';
-    src: url('font/Roboto.ttf')
+    src: url('font/Roboto-Regular.ttf')
+}
+
+@font-face{
+    font-family: 'Roboto Thin';
+    src: url('font/Roboto-Thin.ttf')
+}
+
+*{
+    font-family: 'Roboto';
 }
 
 a{
@@ -15,6 +24,7 @@ a{
 
 button{
     border: none;
+    background-color: rgba(white, 0);
 }
 
 li{

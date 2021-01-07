@@ -1,11 +1,93 @@
-.menu{
-    width: 100%;
-    background-color: $menu-background-color; 
-    &__image{
-        width: 100%;
-    }
-    & + div{
-        display: flex; 
-    }
+.restaurant{
+    background-color: $menu-background-color;
+}
 
+.image{
+    width:100%;
+    img{
+        width:100%;
+    }
+}
+
+.menu{
+    position: relative;
+    top: -2em;
+    border-radius: 2em 2em 0 0; 
+    padding: $padding;
+    display: grid;
+    align-items: center;
+    background-color: $menu-background-color;
+    &__restaurant{
+        display: flex;
+        justify-content:space-between;
+        margin-bottom: 1em;
+    }
+    &__heading{
+        font-family: 'Shrikhand';
+        font-size: 1.8em;
+    }
+    &__like{
+        background-color: none;
+    }
+    &__subtitle{
+        font-family: 'Roboto Thin';
+        text-transform: uppercase;
+        margin-top: 1em;
+        margin-bottom: 0.3em;
+    }
+    &__green-line{
+        background-color: $color-tertiary;
+        height: 3px;
+        width: 40px;
+        margin-bottom: 1em;
+    }
+    &__command{
+        @include button;
+        padding: 1em 3em;
+        margin: 1em auto;
+        width: min-content;
+        font-size:1em;
+    }
+}
+
+.choice{
+    border-radius: 1em;
+    background-color: white;
+    box-shadow: $box-shadow;
+    display:flex;
+    justify-content: space-between;
+    height: 69px;
+    width:100%;
+    overflow: hidden;
+    margin-bottom: 1em;
+    &__description{
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        align-content: space-between;
+        padding: 0.8em;
+        width:100%;
+        flex-wrap: wrap;
+    }
+    &__heading{
+        font-size: 1.12em;
+    }
+    &__side{
+        font-family: 'Roboto Thin';
+        font-size: 0.9em;
+        margin-top: auto;
+    }
+    &__price{
+        font-weight: bold;
+        font-size: 1em;
+    }
+    &__select{
+        position: relative;
+        left:60px;
+        height: 100%;
+        background-color: $color-tertiary;
+        color: white;
+        transform: scaleX(60px);
+    }
+    
 }
