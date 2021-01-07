@@ -17,6 +17,9 @@
     display: grid;
     align-items: center;
     background-color: $menu-background-color;
+    &__restaurant, &__subtitle, &__green-line{
+        margin-left: 0.4em;
+    }
     &__restaurant{
         display: flex;
         justify-content:space-between;
@@ -28,6 +31,8 @@
     }
     &__like{
         background-color: none;
+        font-size: 1.6em;
+        margin-right: 0.9em;
     }
     &__subtitle{
         font-family: 'Roboto Thin';
@@ -46,7 +51,6 @@
         padding: 1em 3em;
         margin: 1em auto;
         width: min-content;
-        font-size:1em;
     }
 }
 
