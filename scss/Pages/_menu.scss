@@ -1,5 +1,6 @@
 .restaurant{
     background-color: $menu-background-color;
+    overflow-y: scroll;
 }
 
 .image{
@@ -11,28 +12,28 @@
 
 .menu{
     position: relative;
-    top: -2em;
-    border-radius: 2em 2em 0 0; 
-    padding: $padding;
+    top: -10.67vw;
+    border-radius: 10.67vw 10.67vw 0 0; 
+    padding: 10.67vw 3.73vw 18.67vw;
     display: grid;
     align-items: center;
     background-color: $menu-background-color;
     &__restaurant, &__subtitle, &__green-line{
-        margin-left: 0.4em;
+        margin-left: 1.6vw;
     }
     &__restaurant{
         display: flex;
         justify-content:space-between;
-        margin-bottom: 1em;
+        margin-bottom: 9.07vw;
+        margin-right: 9.07vw;
     }
     &__heading{
         font-family: 'Shrikhand';
-        font-size: 1.8em;
+        font-size: 7.6vw;
     }
     &__like{
         background-color: none;
-        font-size: 1.6em;
-        margin-right: 0.9em;
+        font-size: 6.4vw;
     }
     &__subtitle{
         font-family: 'Roboto Thin';
