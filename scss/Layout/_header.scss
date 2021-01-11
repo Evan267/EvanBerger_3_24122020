@@ -1,15 +1,15 @@
 .header{
     width: 100%;
-    box-shadow: 0 0.2em 0.2em #CFCFCF;
+    box-shadow: 0 0.85vw 0.85vw #CFCFCF;
     background-color: white;
     height: 17.33vw;
     padding-top: auto;
     &__logo{
         width:46%;
         margin: auto;
+        padding-top:5.33vw;
         img{
             width:100%;
-            margin-top:5.33vw;
         }
     }
     &__previous{
@@ -20,5 +20,17 @@
         background-color: white;
         font-size: 5.5vw;
         color: #2D2D2D;
+    }
+    @include tablet-responsive{
+        height: 10vw;
+        &__logo{
+            width: 25%;
+            padding-top: 3.3vw;
+        }
+        &__previous{
+            top: 3.3vw;
+            left: 3.3vw;
+            font-size: 3.3vw;
+        }
     }
 }

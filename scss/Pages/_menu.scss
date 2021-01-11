@@ -15,8 +15,9 @@
     top: -10.67vw;
     border-radius: 10.67vw 10.67vw 0 0; 
     padding: 10.67vw 3.73vw 8vw;
-    display: grid;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    align-items: top;
     background-color: $menu-background-color;
     &__restaurant, &__subtitle, &__green-line{
         margin-left: 1.6vw;
@@ -24,36 +25,66 @@
     &__restaurant{
         display: flex;
         justify-content:space-between;
-        margin-bottom: 4.8vw;
+        margin-bottom: 1vw;
         margin-right: 6.4vw;
+        width: 90%;
     }
     &__heading{
         font-family: 'Shrikhand';
-        font-size: 7.3vw;
+        @include size(heading-menu);
     }
     &__like{
         background-color: none;
-        font-size: 6.4vw;
+        @include size(heart);
     }
     &__subtitle{
         font-family: 'Roboto Thin';
-        font-size: 4.27vw;
+        @include size;
         text-transform: uppercase;
-        margin-top: 4.27vw;
-        margin-bottom: 1.28vw;
+        margin-top: 6vw;
+        margin-bottom: 1.8vw;
     }
     &__green-line{
         background-color: $color-tertiary;
-        height: 0.4vw;
+        height: 0.6vw;
         width: 10.67vw;
-        margin-bottom: 3.2vw;
+        margin-bottom: 3.67vw;
+    }
+    &__part{
+        width: 100%;
     }
     &__command{
         @include button;
         padding-right: 12.8vw;
         padding-left: 12.8vw;
-        margin: 9.33vw auto 0;
+        margin: 5.53vw auto 0;
         width: min-content;
+    }
+    @include tablet-responsive{
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        top: -6.4vw;
+        border-radius: 6.4vw 6.4vw 0 0;
+        padding: 6.4vw 2.5vw 4.8vw; 
+        &__restaurant{
+            margin-bottom: 4vw;
+        }
+        &__command{
+            padding-right: 7.7vw;
+            padding-left: 7.7vw;
+        }
+        &__part{
+            width:31.8%;
+        }
+        &__subtitle{
+            margin-bottom: 0.7vw;
+        }
+        &__green-line{
+            height: 0.4vw;
+            width: 6.2vw;
+            margin-bottom: 1.5vw;
+        }
     }
 }
 
@@ -65,8 +96,8 @@
     justify-content: space-between;
     height: 18.4vw;
     width:100%;
-    overflow: hidden;
     margin-bottom: 4vw;
+    overflow: hidden;
     &__description{
         display: flex;
         flex-direction: column;
@@ -77,16 +108,16 @@
         flex-wrap: wrap;
     }
     &__heading{
-        font-size: 4.7vw;
+        @include size(choice-heading, 0.3);
     }
     &__side{
         font-family: 'Roboto Thin';
-        font-size: 4vw;
+        @include size(choice-side, 0.3);
         margin-top: auto;
     }
     &__price{
         font-weight: bold;
-        font-size: 4vw;
+        @include size(choice-side, 0.3);
     }
     &__select{
         position: relative;
@@ -96,5 +127,12 @@
         color: white;
         transform: scaleX(16vw);
     }
-    
+    @include tablet-responsive{
+        height: 7vw;
+        border-radius: 1.3vw;
+        margin-bottom: 1.5vw;
+        &__description{
+            padding: 1.9vw 1.2vw; 
+        }
+    }
 }

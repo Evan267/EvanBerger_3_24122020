@@ -12,3 +12,23 @@ $box-shadow: 0px 0.3em 0.5em #E2E2E2;
 
 
 $padding: 3em 1em 3em;
+$font-size: (
+    heading-menu: 7.3vw,
+    heading: 6.67vw,
+    restaurant-link: 5vw,
+    text: 4.27vw,
+    heart: 7.3vw, 
+    exp-number:3.2vw,
+    exp-icon: 5vw,
+    new: 3.5vw,
+    choice-heading: 4.7vw,
+    choice-side: 4vw,
+    ustensils-icon: 4.28vw,
+    hands-icon: 3.1vw,
+);
+
+$breakpoints: (
+    tablet: 600px,
+    computer: 1200px,
+);
+

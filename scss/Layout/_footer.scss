@@ -12,7 +12,7 @@
     &__link{
         color: white;
         margin-bottom: 2.9vw;
-        font-size: 4.26vw;
+        @include size;
         a{
             color: white;
         }
@@ -22,12 +22,12 @@
     }
     &__ustensils-icon{
         .fas{
-            font-size:4.28vw;
+            @include size(ustensils-icon);
         }
     }
     &__hands-icon{
         .fas{
-            font-size:3.1vw;
+            @include size(hands-icon);
         }
     }
 }

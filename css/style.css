@@ -31,16 +31,16 @@ body {
 
 .header {
   width: 100%;
-  box-shadow: 0 0.2em 0.2em #CFCFCF;
+  box-shadow: 0 0.85vw 0.85vw #CFCFCF;
   background-color: white;
   height: 17.33vw;
   padding-top: auto; }
   .header__logo {
     width: 46%;
-    margin: auto; }
+    margin: auto;
+    padding-top: 5.33vw; }
     .header__logo img {
-      width: 100%;
-      margin-top: 5.33vw; }
+      width: 100%; }
   .header__previous {
     position: absolute;
     top: 5.5vw;
@@ -49,6 +49,16 @@ body {
     background-color: white;
     font-size: 5.5vw;
     color: #2D2D2D; }
+  @media screen and (min-width: 600px) {
+    .header {
+      height: 10vw; }
+      .header__logo {
+        width: 25%;
+        padding-top: 3.3vw; }
+      .header__previous {
+        top: 3.3vw;
+        left: 3.3vw;
+        font-size: 3.3vw; } }
 
 .footer {
   padding: 6.67vw;
@@ -62,15 +72,24 @@ body {
   .footer__link {
     color: white;
     margin-bottom: 2.9vw;
-    font-size: 4.26vw; }
+    font-size: 4.27vw; }
+    @media screen and (min-width: 600px) {
+      .footer__link {
+        font-size: 2.562vw; } }
     .footer__link a {
       color: white; }
     .footer__link i {
       margin-right: 4vw; }
   .footer__ustensils-icon .fas {
     font-size: 4.28vw; }
+    @media screen and (min-width: 600px) {
+      .footer__ustensils-icon .fas {
+        font-size: 2.568vw; } }
   .footer__hands-icon .fas {
     font-size: 3.1vw; }
+    @media screen and (min-width: 600px) {
+      .footer__hands-icon .fas {
+        font-size: 1.86vw; } }
 
 .location__current {
   width: 100%;
@@ -81,9 +100,15 @@ body {
   .location__current i {
     margin-right: 4.8vw;
     font-size: 4.27vw; }
+    @media screen and (min-width: 600px) {
+      .location__current i {
+        font-size: 2.562vw; } }
   .location__current p {
     margin-right: 9.33vw;
     font-size: 4.27vw; }
+    @media screen and (min-width: 600px) {
+      .location__current p {
+        font-size: 2.562vw; } }
 .location__explorate {
   padding: 10.67vw 10.67vw 15.2vw;
   background-color: rgba(255, 255, 255, 0.55);
@@ -92,9 +117,15 @@ body {
     margin-bottom: 5vw;
     font-size: 6.67vw;
     padding: 0 6.67vw; }
+    @media screen and (min-width: 600px) {
+      .location__explorate h1 {
+        font-size: 4.002vw; } }
   .location__explorate p {
     font-family: 'Roboto Thin';
-    font-size: 4.3vw; }
+    font-size: 4.27vw; }
+    @media screen and (min-width: 600px) {
+      .location__explorate p {
+        font-size: 2.562vw; } }
   .location__explorate button {
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     padding: 4.8vw 5.87vw;
@@ -103,13 +134,22 @@ body {
     box-shadow: 0 2.13vw 2.13vw #C4C4C4;
     font-size: 4.27vw;
     margin-top: 8.27vw; }
+    @media screen and (min-width: 600px) {
+      .location__explorate button {
+        font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .location__explorate button {
+        padding: 2.8vw 3.5vw; } }
 
 .help {
   padding: 13.87vw 5.33vw 11.47vw;
   background-color: white; }
   .help__heading {
     margin-bottom: 6.67vw;
-    font-size: 6.6vw; }
+    font-size: 6.67vw; }
+    @media screen and (min-width: 600px) {
+      .help__heading {
+        font-size: 4.002vw; } }
   .help__explanation {
     background-color: rgba(234, 234, 234, 0.45);
     box-shadow: 0px 0.3em 0.5em #E2E2E2;
@@ -126,20 +166,38 @@ body {
       border-radius: 100%;
       padding: 1vw 2.2vw;
       color: white;
-      font-size: 3.8vw;
+      font-size: 3.2vw;
       margin-right: 2%; }
+      @media screen and (min-width: 600px) {
+        .help__explanation span {
+          font-size: 0.96vw; } }
     .help__explanation i {
       color: grey;
       font-size: 5vw; }
+      @media screen and (min-width: 600px) {
+        .help__explanation i {
+          font-size: 1.5vw; } }
     .help__explanation p {
       position: absolute;
       left: 25%;
       top: 6.67vw;
-      font-size: 4.26vw; }
+      font-size: 4.27vw; }
+      @media screen and (min-width: 600px) {
+        .help__explanation p {
+          font-size: 1.281vw; } }
     .help__explanation:hover {
       background-color: rgba(147, 86, 220, 0.1); }
       .help__explanation:hover i {
         color: #9356DC; }
+  @media screen and (min-width: 600px) {
+    .help {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      grid-template-rows: repeat(2, min-content); }
+      .help__heading {
+        grid-column-start: 1;
+        grid-column-end: 4;
+        grid-row-start: 1; } }
 
 .grid {
   padding: 15.47vw 5.33vw 17.07vw;
@@ -147,9 +205,23 @@ body {
   display: grid;
   grid-template-columns: auto;
   grid-template-rows: 1;
-  row-gap: 4.8vw; }
+  row-gap: 4.8vw;
+  column-gap: 2.4vw; }
   .grid__heading {
-    font-size: 6.6vw; }
+    font-size: 6.67vw; }
+    @media screen and (min-width: 600px) {
+      .grid__heading {
+        font-size: 4.002vw; } }
+  @media screen and (min-width: 600px) {
+    .grid {
+      padding: 9.2vw 3.2vw 10.2vw;
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: min-content repeat(2, 1fr);
+      row-gap: 2.4vw; }
+      .grid__heading {
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row-start: 1; } }
 
 .restaurant {
   width: 100%;
@@ -172,6 +244,9 @@ body {
     padding: 1.5vw 3.2vw;
     color: #217460;
     font-size: 3.5vw; }
+    @media screen and (min-width: 600px) {
+      .restaurant__new {
+        font-size: 1.75vw; } }
   .restaurant figcaption {
     display: flex;
     flex-direction: column;
@@ -183,12 +258,32 @@ body {
   .restaurant__heading {
     width: max-content;
     font-size: 5vw; }
+    @media screen and (min-width: 600px) {
+      .restaurant__heading {
+        font-size: 2.5vw; } }
   .restaurant__location {
-    width: 80%;
-    font-size: 5vw;
+    font-size: 4.27vw;
     font-family: 'Roboto Thin'; }
+    @media screen and (min-width: 600px) {
+      .restaurant__location {
+        font-size: 2.135vw; } }
   .restaurant__like {
-    font-size: 6.4vw; }
+    font-size: 7.3vw;
+    width: min-content; }
+    @media screen and (min-width: 600px) {
+      .restaurant__like {
+        font-size: 4.38vw; } }
+  @media screen and (min-width: 600px) {
+    .restaurant {
+      height: 34.1vw;
+      border-radius: 2vw; }
+      .restaurant figcaption {
+        padding: 0 3vw 0 1.5vw; }
+      .restaurant__new {
+        top: 1.7vw;
+        right: 1.7vw;
+        padding: 0.7vw 1.5vw;
+        border-radius: 0.25vw; } }
 
 .restaurant {
   background-color: #F6F6F6;
@@ -204,33 +299,46 @@ body {
   top: -10.67vw;
   border-radius: 10.67vw 10.67vw 0 0;
   padding: 10.67vw 3.73vw 8vw;
-  display: grid;
-  align-items: center;
+  display: flex;
+  flex-direction: column;
+  align-items: top;
   background-color: #F6F6F6; }
   .menu__restaurant, .menu__subtitle, .menu__green-line {
     margin-left: 1.6vw; }
   .menu__restaurant {
     display: flex;
     justify-content: space-between;
-    margin-bottom: 4.8vw;
-    margin-right: 6.4vw; }
+    margin-bottom: 1vw;
+    margin-right: 6.4vw;
+    width: 90%; }
   .menu__heading {
     font-family: 'Shrikhand';
     font-size: 7.3vw; }
+    @media screen and (min-width: 600px) {
+      .menu__heading {
+        font-size: 4.38vw; } }
   .menu__like {
     background-color: none;
-    font-size: 6.4vw; }
+    font-size: 7.3vw; }
+    @media screen and (min-width: 600px) {
+      .menu__like {
+        font-size: 4.38vw; } }
   .menu__subtitle {
     font-family: 'Roboto Thin';
     font-size: 4.27vw;
     text-transform: uppercase;
-    margin-top: 4.27vw;
-    margin-bottom: 1.28vw; }
+    margin-top: 6vw;
+    margin-bottom: 1.8vw; }
+    @media screen and (min-width: 600px) {
+      .menu__subtitle {
+        font-size: 2.562vw; } }
   .menu__green-line {
     background-color: #99E2D0;
-    height: 0.4vw;
+    height: 0.6vw;
     width: 10.67vw;
-    margin-bottom: 3.2vw; }
+    margin-bottom: 3.67vw; }
+  .menu__part {
+    width: 100%; }
   .menu__command {
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     padding: 4.8vw 5.87vw;
@@ -240,8 +348,35 @@ body {
     font-size: 4.27vw;
     padding-right: 12.8vw;
     padding-left: 12.8vw;
-    margin: 9.33vw auto 0;
+    margin: 5.53vw auto 0;
     width: min-content; }
+    @media screen and (min-width: 600px) {
+      .menu__command {
+        font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .menu__command {
+        padding: 2.8vw 3.5vw; } }
+  @media screen and (min-width: 600px) {
+    .menu {
+      flex-direction: row;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      top: -6.4vw;
+      border-radius: 6.4vw 6.4vw 0 0;
+      padding: 6.4vw 2.5vw 4.8vw; }
+      .menu__restaurant {
+        margin-bottom: 4vw; }
+      .menu__command {
+        padding-right: 7.7vw;
+        padding-left: 7.7vw; }
+      .menu__part {
+        width: 31.8%; }
+      .menu__subtitle {
+        margin-bottom: 0.7vw; }
+      .menu__green-line {
+        height: 0.4vw;
+        width: 6.2vw;
+        margin-bottom: 1.5vw; } }
 
 .choice {
   border-radius: 4vw;
@@ -251,8 +386,8 @@ body {
   justify-content: space-between;
   height: 18.4vw;
   width: 100%;
-  overflow: hidden;
-  margin-bottom: 4vw; }
+  margin-bottom: 4vw;
+  overflow: hidden; }
   .choice__description {
     display: flex;
     flex-direction: column;
@@ -263,13 +398,22 @@ body {
     flex-wrap: wrap; }
   .choice__heading {
     font-size: 4.7vw; }
+    @media screen and (min-width: 600px) {
+      .choice__heading {
+        font-size: 1.41vw; } }
   .choice__side {
     font-family: 'Roboto Thin';
     font-size: 4vw;
     margin-top: auto; }
+    @media screen and (min-width: 600px) {
+      .choice__side {
+        font-size: 1.2vw; } }
   .choice__price {
     font-weight: bold;
     font-size: 4vw; }
+    @media screen and (min-width: 600px) {
+      .choice__price {
+        font-size: 1.2vw; } }
   .choice__select {
     position: relative;
     left: 16vw;
@@ -277,5 +421,12 @@ body {
     background-color: #99E2D0;
     color: white;
     transform: scaleX(16vw); }
+  @media screen and (min-width: 600px) {
+    .choice {
+      height: 7vw;
+      border-radius: 1.3vw;
+      margin-bottom: 1.5vw; }
+      .choice__description {
+        padding: 1.9vw 1.2vw; } }
 
 /*# sourceMappingURL=style.css.map */

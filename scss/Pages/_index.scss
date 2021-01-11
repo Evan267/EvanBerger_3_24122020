@@ -9,11 +9,11 @@
         align-items: center;
         i{
             margin-right: 4.8vw;
-            font-size: 4.27vw;
+            @include size;
         }
         p{
             margin-right: 9.33vw;
-            font-size: 4.27vw;
+            @include size;
         }
     }
     &__explorate{
@@ -22,12 +22,12 @@
         text-align: center;
         h1{
             margin-bottom: 5vw; 
-            font-size: 6.67vw;
+            @include size(heading);
             padding: 0 6.67vw;
         }
         p{
             font-family: 'Roboto Thin';
-            font-size: 4.3vw;
+            @include size;
         }
         button{
             @include button;
@@ -41,7 +41,7 @@
     background-color: white;
     &__heading{
         margin-bottom: 6.67vw;
-        font-size: 6.6vw;
+        @include size(heading);
     }
     &__explanation{
         background-color: $background-grey2;
@@ -59,24 +59,34 @@
             border-radius:100%;
             padding:1vw 2.2vw;
             color: white;
-            font-size: 3.8vw;
+            @include size(exp-number, 0.3);
             margin-right: 2%;
         }
         i{
             color: grey;
-            font-size: 5vw;
+            @include size(exp-icon, 0.3);
         }
         p{
             position: absolute;
             left: 25%;
             top: 6.67vw;
-            font-size: 4.26vw;
+            @include size(text, 0.3);
         }
         &:hover{
             background-color: rgba($color-primary, .10);
             i{
                 color: $color-primary;
             }
+        }
+    }
+    @include tablet-responsive{
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: repeat(2, min-content);
+        &__heading{
+            grid-column-start: 1;
+            grid-column-end: 4;
+            grid-row-start: 1;
         }
     }
 }
@@ -88,8 +98,20 @@
     grid-template-columns: auto;
     grid-template-rows: 1;
     row-gap: 4.8vw;
+    column-gap: 2.4vw;
     &__heading{
-        font-size: 6.6vw;
+        @include size(heading);
+    }
+    @include tablet-responsive{
+        padding: 9.2vw 3.2vw 10.2vw;
+        grid-template-columns: repeat(2,1fr);
+        grid-template-rows: min-content repeat(2,1fr);
+        row-gap: 2.4vw;
+        &__heading{
+            grid-column-start: 1 ;
+            grid-column-end: 3;
+            grid-row-start: 1;
+        }       
     }
 }
 
@@ -115,7 +137,7 @@
         background-color: $color-tertiary;
         padding: 1.5vw 3.2vw;
         color: darken($color-tertiary, 45);
-        font-size: 3.5vw;
+        @include size(new, 0.5);
     }
     figcaption{
         display: flex;
@@ -128,15 +150,28 @@
     }
     &__heading{
         width: max-content;
-        font-size: 5vw;
+        @include size(restaurant-link, 0.5);
     }
     &__location{
-        width: 80%;
-        font-size: 5vw;
+        @include size(text, 0.5);
         font-family: 'Roboto Thin';
     }
     &__like{
-        font-size: 6.4vw;
+        @include size(heart);
+        width:min-content;
+    }
+    @include tablet-responsive{
+        height: 34.1vw;
+        border-radius: 2vw;
+        figcaption{
+            padding: 0 3vw 0 1.5vw;
+        }
+        &__new{
+            top: 1.7vw;
+            right: 1.7vw;
+            padding: 0.7vw 1.5vw;
+            border-radius: 0.25vw;
+        }
     }
 }
 

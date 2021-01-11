@@ -1,9 +1,25 @@
+@mixin tablet-responsive{
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
+
+@mixin size($size: text, $coefficient: 0.6){
+    font-size: map-get($font-size, $size);
+    @include tablet-responsive{
+        font-size: map-get($font-size, $size)*$coefficient;
+    }
+}
+
 @mixin button {
     background: linear-gradient( 0deg, $color-primary, $color-secondary);
     padding: 4.8vw 5.87vw;
     border-radius: 8.53vw;
     color: white;
     box-shadow: 0 2.13vw 2.13vw #C4C4C4;
-    font-size: 4.27vw;
+    @include size;
+    @include tablet-responsive{
+        padding: 2.8vw 3.5vw;
+    }
 }
 
