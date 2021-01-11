@@ -3,6 +3,11 @@
         @content;
     }
 }
+@mixin computer-responsive{
+    @media screen and (min-width: map-get($breakpoints, tablet)){
+        @content;
+    }
+}
 
 @mixin size($size: text, $coefficient: 0.6){
     font-size: map-get($font-size, $size);

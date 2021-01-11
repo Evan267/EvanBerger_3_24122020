@@ -34,6 +34,26 @@
             margin-top: 8.27vw;
         }
     }
+    @include tablet-responsive{
+        &__current{
+            height: 8vw;
+            i{
+                margin-right: 2vw;
+            }
+            p{
+                margin-right: 2.8vw;
+            }
+        }
+        &__explorate{
+            padding: 6.4vw 6.4vw 8vw;
+            h1{
+                margin-bottom: 2vw; 
+            }
+            button{
+                margin-top: 6vw;
+            }
+        }
+    }
 }
 
 .help{
@@ -69,8 +89,8 @@
         p{
             position: absolute;
             left: 25%;
-            top: 6.67vw;
-            @include size(text, 0.3);
+            top: 40%;
+            @include size(text, 0.4);
         }
         &:hover{
             background-color: rgba($color-primary, .10);
@@ -80,6 +100,7 @@
         }
     }
     @include tablet-responsive{
+        padding: 7vw 3.2vw;
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: repeat(2, min-content);
@@ -87,6 +108,18 @@
             grid-column-start: 1;
             grid-column-end: 4;
             grid-row-start: 1;
+            margin-bottom: 3vw;
+        }
+        &__explanation{
+            margin-bottom: 0;
+            padding: 2.5vw 0;
+            border-radius: 2vw;
+            span{
+                right: 4%;
+                padding:0.5vw 0.9vw;
+                color: white;
+                margin-right: 2%;
+            }
         }
     }
 }
@@ -157,7 +190,7 @@
         font-family: 'Roboto Thin';
     }
     &__like{
-        @include size(heart);
+        @include size(heart, 0.55);
         width:min-content;
     }
     @include tablet-responsive{

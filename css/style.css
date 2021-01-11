@@ -140,6 +140,19 @@ body {
     @media screen and (min-width: 600px) {
       .location__explorate button {
         padding: 2.8vw 3.5vw; } }
+@media screen and (min-width: 600px) {
+  .location__current {
+    height: 8vw; }
+    .location__current i {
+      margin-right: 2vw; }
+    .location__current p {
+      margin-right: 2.8vw; }
+  .location__explorate {
+    padding: 6.4vw 6.4vw 8vw; }
+    .location__explorate h1 {
+      margin-bottom: 2vw; }
+    .location__explorate button {
+      margin-top: 6vw; } }
 
 .help {
   padding: 13.87vw 5.33vw 11.47vw;
@@ -180,24 +193,35 @@ body {
     .help__explanation p {
       position: absolute;
       left: 25%;
-      top: 6.67vw;
+      top: 40%;
       font-size: 4.27vw; }
       @media screen and (min-width: 600px) {
         .help__explanation p {
-          font-size: 1.281vw; } }
+          font-size: 1.708vw; } }
     .help__explanation:hover {
       background-color: rgba(147, 86, 220, 0.1); }
       .help__explanation:hover i {
         color: #9356DC; }
   @media screen and (min-width: 600px) {
     .help {
+      padding: 7vw 3.2vw;
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       grid-template-rows: repeat(2, min-content); }
       .help__heading {
         grid-column-start: 1;
         grid-column-end: 4;
-        grid-row-start: 1; } }
+        grid-row-start: 1;
+        margin-bottom: 3vw; }
+      .help__explanation {
+        margin-bottom: 0;
+        padding: 2.5vw 0;
+        border-radius: 2vw; }
+        .help__explanation span {
+          right: 4%;
+          padding: 0.5vw 0.9vw;
+          color: white;
+          margin-right: 2%; } }
 
 .grid {
   padding: 15.47vw 5.33vw 17.07vw;
@@ -272,7 +296,7 @@ body {
     width: min-content; }
     @media screen and (min-width: 600px) {
       .restaurant__like {
-        font-size: 4.38vw; } }
+        font-size: 4.015vw; } }
   @media screen and (min-width: 600px) {
     .restaurant {
       height: 34.1vw;
