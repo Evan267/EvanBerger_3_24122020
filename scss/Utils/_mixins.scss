@@ -9,10 +9,13 @@
     }
 }
 
-@mixin size($size: text, $coefficient: 0.6){
+@mixin size($size: text, $coeff-tablet: 0.6, $coeff-computer: 0.3){
     font-size: map-get($font-size, $size);
     @include tablet-responsive{
-        font-size: map-get($font-size, $size)*$coefficient;
+        font-size: map-get($font-size, $size)*$coeff-tablet;
+    }
+    @include computer-responsive{
+        font-size: map-get($font-size, $size)*$coeff-computer;
     }
 }
 

@@ -30,4 +30,17 @@
             @include size(hands-icon);
         }
     }
+    @include computer-responsive{
+        padding: 2vw ;
+        &__logo{
+            height: 2vw;
+            margin-bottom: 1.6vw;
+        }
+        &__link{
+            margin-bottom: 0.9vw;
+            i{
+                margin-right: 1.2vw;
+            }
+        }
+    }
 }

@@ -59,6 +59,16 @@ body {
         top: 3.3vw;
         left: 3.3vw;
         font-size: 3.3vw; } }
+  @media screen and (min-width: 600px) {
+    .header {
+      height: 6vw; }
+      .header__logo {
+        width: 13%;
+        padding-top: 2vw; }
+      .header__previous {
+        top: 2vw;
+        left: 2vw;
+        font-size: 2vw; } }
 
 .footer {
   padding: 6.67vw;
@@ -76,6 +86,9 @@ body {
     @media screen and (min-width: 600px) {
       .footer__link {
         font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .footer__link {
+        font-size: 1.281vw; } }
     .footer__link a {
       color: white; }
     .footer__link i {
@@ -85,11 +98,27 @@ body {
     @media screen and (min-width: 600px) {
       .footer__ustensils-icon .fas {
         font-size: 2.568vw; } }
+    @media screen and (min-width: 600px) {
+      .footer__ustensils-icon .fas {
+        font-size: 1.284vw; } }
   .footer__hands-icon .fas {
     font-size: 3.1vw; }
     @media screen and (min-width: 600px) {
       .footer__hands-icon .fas {
         font-size: 1.86vw; } }
+    @media screen and (min-width: 600px) {
+      .footer__hands-icon .fas {
+        font-size: 0.93vw; } }
+  @media screen and (min-width: 600px) {
+    .footer {
+      padding: 2vw; }
+      .footer__logo {
+        height: 2vw;
+        margin-bottom: 1.6vw; }
+      .footer__link {
+        margin-bottom: 0.9vw; }
+        .footer__link i {
+          margin-right: 1.2vw; } }
 
 .location__current {
   width: 100%;
@@ -103,12 +132,18 @@ body {
     @media screen and (min-width: 600px) {
       .location__current i {
         font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .location__current i {
+        font-size: 1.281vw; } }
   .location__current p {
     margin-right: 9.33vw;
     font-size: 4.27vw; }
     @media screen and (min-width: 600px) {
       .location__current p {
         font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .location__current p {
+        font-size: 1.281vw; } }
 .location__explorate {
   padding: 10.67vw 10.67vw 15.2vw;
   background-color: rgba(255, 255, 255, 0.55);
@@ -120,12 +155,18 @@ body {
     @media screen and (min-width: 600px) {
       .location__explorate h1 {
         font-size: 4.002vw; } }
+    @media screen and (min-width: 600px) {
+      .location__explorate h1 {
+        font-size: 2.001vw; } }
   .location__explorate p {
     font-family: 'Roboto Thin';
     font-size: 4.27vw; }
     @media screen and (min-width: 600px) {
       .location__explorate p {
         font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .location__explorate p {
+        font-size: 1.281vw; } }
   .location__explorate button {
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     padding: 4.8vw 5.87vw;
@@ -137,6 +178,9 @@ body {
     @media screen and (min-width: 600px) {
       .location__explorate button {
         font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .location__explorate button {
+        font-size: 1.281vw; } }
     @media screen and (min-width: 600px) {
       .location__explorate button {
         padding: 2.8vw 3.5vw; } }
@@ -163,6 +207,9 @@ body {
     @media screen and (min-width: 600px) {
       .help__heading {
         font-size: 4.002vw; } }
+    @media screen and (min-width: 600px) {
+      .help__heading {
+        font-size: 2.001vw; } }
   .help__explanation {
     background-color: rgba(234, 234, 234, 0.45);
     box-shadow: 0px 0.3em 0.5em #E2E2E2;
@@ -184,9 +231,15 @@ body {
       @media screen and (min-width: 600px) {
         .help__explanation span {
           font-size: 0.96vw; } }
+      @media screen and (min-width: 600px) {
+        .help__explanation span {
+          font-size: 0.96vw; } }
     .help__explanation i {
       color: grey;
       font-size: 5vw; }
+      @media screen and (min-width: 600px) {
+        .help__explanation i {
+          font-size: 1.5vw; } }
       @media screen and (min-width: 600px) {
         .help__explanation i {
           font-size: 1.5vw; } }
@@ -198,6 +251,9 @@ body {
       @media screen and (min-width: 600px) {
         .help__explanation p {
           font-size: 1.708vw; } }
+      @media screen and (min-width: 600px) {
+        .help__explanation p {
+          font-size: 1.281vw; } }
     .help__explanation:hover {
       background-color: rgba(147, 86, 220, 0.1); }
       .help__explanation:hover i {
@@ -236,6 +292,9 @@ body {
     @media screen and (min-width: 600px) {
       .grid__heading {
         font-size: 4.002vw; } }
+    @media screen and (min-width: 600px) {
+      .grid__heading {
+        font-size: 2.001vw; } }
   @media screen and (min-width: 600px) {
     .grid {
       padding: 9.2vw 3.2vw 10.2vw;
@@ -271,6 +330,9 @@ body {
     @media screen and (min-width: 600px) {
       .restaurant__new {
         font-size: 1.75vw; } }
+    @media screen and (min-width: 600px) {
+      .restaurant__new {
+        font-size: 1.05vw; } }
   .restaurant figcaption {
     display: flex;
     flex-direction: column;
@@ -285,18 +347,27 @@ body {
     @media screen and (min-width: 600px) {
       .restaurant__heading {
         font-size: 2.5vw; } }
+    @media screen and (min-width: 600px) {
+      .restaurant__heading {
+        font-size: 1.5vw; } }
   .restaurant__location {
     font-size: 4.27vw;
     font-family: 'Roboto Thin'; }
     @media screen and (min-width: 600px) {
       .restaurant__location {
         font-size: 2.135vw; } }
+    @media screen and (min-width: 600px) {
+      .restaurant__location {
+        font-size: 1.281vw; } }
   .restaurant__like {
     font-size: 7.3vw;
     width: min-content; }
     @media screen and (min-width: 600px) {
       .restaurant__like {
         font-size: 4.015vw; } }
+    @media screen and (min-width: 600px) {
+      .restaurant__like {
+        font-size: 2.19vw; } }
   @media screen and (min-width: 600px) {
     .restaurant {
       height: 34.1vw;
@@ -341,12 +412,18 @@ body {
     @media screen and (min-width: 600px) {
       .menu__heading {
         font-size: 4.38vw; } }
+    @media screen and (min-width: 600px) {
+      .menu__heading {
+        font-size: 2.19vw; } }
   .menu__like {
     background-color: none;
     font-size: 7.3vw; }
     @media screen and (min-width: 600px) {
       .menu__like {
         font-size: 4.38vw; } }
+    @media screen and (min-width: 600px) {
+      .menu__like {
+        font-size: 2.19vw; } }
   .menu__subtitle {
     font-family: 'Roboto Thin';
     font-size: 4.27vw;
@@ -356,6 +433,9 @@ body {
     @media screen and (min-width: 600px) {
       .menu__subtitle {
         font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .menu__subtitle {
+        font-size: 1.281vw; } }
   .menu__green-line {
     background-color: #99E2D0;
     height: 0.6vw;
@@ -377,6 +457,9 @@ body {
     @media screen and (min-width: 600px) {
       .menu__command {
         font-size: 2.562vw; } }
+    @media screen and (min-width: 600px) {
+      .menu__command {
+        font-size: 1.281vw; } }
     @media screen and (min-width: 600px) {
       .menu__command {
         padding: 2.8vw 3.5vw; } }
@@ -425,6 +508,9 @@ body {
     @media screen and (min-width: 600px) {
       .choice__heading {
         font-size: 1.41vw; } }
+    @media screen and (min-width: 600px) {
+      .choice__heading {
+        font-size: 1.41vw; } }
   .choice__side {
     font-family: 'Roboto Thin';
     font-size: 4vw;
@@ -432,9 +518,15 @@ body {
     @media screen and (min-width: 600px) {
       .choice__side {
         font-size: 1.2vw; } }
+    @media screen and (min-width: 600px) {
+      .choice__side {
+        font-size: 1.2vw; } }
   .choice__price {
     font-weight: bold;
     font-size: 4vw; }
+    @media screen and (min-width: 600px) {
+      .choice__price {
+        font-size: 1.2vw; } }
     @media screen and (min-width: 600px) {
       .choice__price {
         font-size: 1.2vw; } }

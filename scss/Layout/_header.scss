@@ -33,4 +33,16 @@
             font-size: 3.3vw;
         }
     }
+    @include computer-responsive{
+        height: 6vw;
+        &__logo{
+            width: 13%;
+            padding-top: 2vw;
+        }
+        &__previous{
+            top: 2vw;
+            left: 2vw;
+            font-size: 2vw;
+        }
+    }
 }
