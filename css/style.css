@@ -180,7 +180,7 @@ body {
         font-size: 2.562vw; } }
     @media screen and (min-width: 1020px) {
       .location__explorate button {
-        font-size: 1.281vw; } }
+        font-size: 1.708vw; } }
     @media screen and (min-width: 600px) {
       .location__explorate button {
         padding: 2.8vw 3.5vw; } }
@@ -455,7 +455,7 @@ body {
         font-size: 4.38vw; } }
     @media screen and (min-width: 1020px) {
       .menu__heading {
-        font-size: 2.19vw; } }
+        font-size: 3.285vw; } }
   .menu__like {
     background-color: none;
     font-size: 7.3vw; }
@@ -464,7 +464,7 @@ body {
         font-size: 4.38vw; } }
     @media screen and (min-width: 1020px) {
       .menu__like {
-        font-size: 2.19vw; } }
+        font-size: 2.92vw; } }
   .menu__subtitle {
     font-family: 'Roboto Thin';
     font-size: 4.27vw;
@@ -476,7 +476,7 @@ body {
         font-size: 2.562vw; } }
     @media screen and (min-width: 1020px) {
       .menu__subtitle {
-        font-size: 1.281vw; } }
+        font-size: 1.4945vw; } }
   .menu__green-line {
     background-color: #99E2D0;
     height: 0.6vw;
@@ -500,7 +500,7 @@ body {
         font-size: 2.562vw; } }
     @media screen and (min-width: 1020px) {
       .menu__command {
-        font-size: 1.281vw; } }
+        font-size: 1.708vw; } }
     @media screen and (min-width: 600px) {
       .menu__command {
         padding: 2.8vw 3.5vw; } }
@@ -514,7 +514,7 @@ body {
       justify-content: space-between;
       top: -6.4vw;
       border-radius: 6.4vw 6.4vw 0 0;
-      padding: 6.4vw 2.5vw 4.8vw; }
+      padding: 6.4vw 3.2vw 4.8vw; }
       .menu__restaurant {
         margin-bottom: 4vw; }
       .menu__command {
@@ -528,6 +528,24 @@ body {
         height: 0.4vw;
         width: 6.2vw;
         margin-bottom: 1.5vw; } }
+  @media screen and (min-width: 1020px) {
+    .menu {
+      top: -3.2vw;
+      border-radius: 3.2vw 3.2vw 0 0;
+      padding: 3.2vw 1.6vw 2.4vw; }
+      .menu__restaurant {
+        margin-bottom: 0; }
+      .menu__command {
+        padding-right: 3.8vw;
+        padding-left: 3.8vw; }
+      .menu__subtitle {
+        margin-bottom: 0.3vw; }
+      .menu__green-line {
+        height: 0.23vw;
+        width: 3.8vw;
+        margin-bottom: 1.3vw; }
+      .menu__command {
+        margin: 2.8vw auto; } }
 
 .choice {
   border-radius: 4vw;

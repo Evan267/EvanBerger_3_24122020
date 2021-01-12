@@ -31,15 +31,15 @@
     }
     &__heading{
         font-family: 'Shrikhand';
-        @include size(heading-menu);
+        @include size(heading-menu, 0.6, 0.45);
     }
     &__like{
         background-color: none;
-        @include size(heart);
+        @include size(heart, 0.6, 0.4);
     }
     &__subtitle{
         font-family: 'Roboto Thin';
-        @include size;
+        @include size(text, 0.6, 0.35);
         text-transform: uppercase;
         margin-top: 6vw;
         margin-bottom: 1.8vw;
@@ -66,7 +66,7 @@
         justify-content: space-between;
         top: -6.4vw;
         border-radius: 6.4vw 6.4vw 0 0;
-        padding: 6.4vw 2.5vw 4.8vw; 
+        padding: 6.4vw 3.2vw 4.8vw; 
         &__restaurant{
             margin-bottom: 4vw;
         }
@@ -84,6 +84,29 @@
             height: 0.4vw;
             width: 6.2vw;
             margin-bottom: 1.5vw;
+        }
+    }
+    @include computer-responsive{
+        top: -3.2vw;
+        border-radius: 3.2vw 3.2vw 0 0;
+        padding: 3.2vw 1.6vw 2.4vw; 
+        &__restaurant{
+            margin-bottom: 0;
+        }
+        &__command{
+            padding-right: 3.8vw;
+            padding-left: 3.8vw;
+        }
+        &__subtitle{
+            margin-bottom: 0.3vw;
+        }
+        &__green-line{
+            height: 0.23vw;
+            width: 3.8vw;
+            margin-bottom: 1.3vw;
+        }
+        &__command{
+            margin: 2.8vw auto;
         }
     }
 }

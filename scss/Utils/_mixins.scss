@@ -25,7 +25,7 @@
     border-radius: 8.53vw;
     color: white;
     box-shadow: 0 2.13vw 2.13vw #C4C4C4;
-    @include size;
+    @include size(text,0.6,0.4);
     @include tablet-responsive{
         padding: 2.8vw 3.5vw;
     }
