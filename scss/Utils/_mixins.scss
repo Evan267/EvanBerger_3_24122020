@@ -4,7 +4,7 @@
     }
 }
 @mixin computer-responsive{
-    @media screen and (min-width: map-get($breakpoints, tablet)){
+    @media screen and (min-width: map-get($breakpoints, computer)){
         @content;
     }
 }
@@ -29,5 +29,7 @@
     @include tablet-responsive{
         padding: 2.8vw 3.5vw;
     }
+    @include computer-responsive{
+        padding: 1.4vw 1.8vw;
+    }
 }
-
