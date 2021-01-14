@@ -29,6 +29,45 @@ body {
   background-color: #EAEAEA;
   padding: 0px; }
 
+.loader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  background-color: white;
+  animation: loader 5000ms both; }
+  .loader__spinner {
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    margin: auto;
+    border-top: 1vh solid rgba(147, 86, 220, 0.2);
+    border-right: 1vh solid rgba(147, 86, 220, 0.2);
+    border-bottom: 1vh solid rgba(147, 86, 220, 0.2);
+    border-left: 1vh solid #9356DC;
+    animation: loader-spinner 800ms infinite linear; }
+
+@keyframes loader {
+  0% {
+    opacity: 1; }
+  95% {
+    opacity: 1; }
+  99% {
+    z-index: 2; }
+  100% {
+    opacity: 0;
+    z-index: -10; } }
+@keyframes loader-spinner {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
 .header {
   width: 100%;
   box-shadow: 0 0.85vw 0.85vw #CFCFCF;
@@ -120,6 +159,30 @@ body {
         .footer__link i {
           margin-right: 1.2vw; } }
 
+.loader {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  z-index: 2;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 100vh;
+  background-color: white;
+  animation: loader 5000ms both; }
+  .loader__spinner {
+    border-radius: 50%;
+    width: 10vh;
+    height: 10vh;
+    margin: auto;
+    border-top: 1vh solid rgba(147, 86, 220, 0.2);
+    border-right: 1vh solid rgba(147, 86, 220, 0.2);
+    border-bottom: 1vh solid rgba(147, 86, 220, 0.2);
+    border-left: 1vh solid #9356DC;
+    animation: loader-spinner 800ms infinite linear; }
+
 .location__current {
   width: 100%;
   height: 13.33vw;
@@ -168,6 +231,8 @@ body {
       .location__explorate p {
         font-size: 1.281vw; } }
   .location__explorate button {
+    position: relative;
+    z-index: 1;
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     padding: 4.8vw 5.87vw;
     border-radius: 8.53vw;
@@ -187,6 +252,21 @@ body {
     @media screen and (min-width: 1020px) {
       .location__explorate button {
         padding: 1.4vw 1.8vw; } }
+    .location__explorate button:hover::after {
+      opacity: 1; }
+    .location__explorate button::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 4vw 4vw #C4C4C4;
+      border-radius: 8.53vw;
+      background: linear-gradient(0deg, #8641d8, #ff60d3);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms; }
 @media screen and (min-width: 600px) {
   .location__current {
     height: 8vw; }
@@ -326,7 +406,7 @@ body {
         grid-column-start: 1;
         grid-column-end: 3;
         grid-row-start: 1; } }
-  @media screen and (min-width: 600px) {
+  @media screen and (min-width: 1020px) {
     .grid {
       padding: 4.6vw 1.6vw 5.6vw;
       grid-template-columns: repeat(4, 1fr);
@@ -391,13 +471,29 @@ body {
         font-size: 1.0675vw; } }
   .restaurant__like {
     font-size: 7.3vw;
-    width: min-content; }
+    position: relative;
+    z-index: 1;
+    width: 3vw; }
     @media screen and (min-width: 600px) {
       .restaurant__like {
         font-size: 4.015vw; } }
     @media screen and (min-width: 1020px) {
       .restaurant__like {
         font-size: 1.971vw; } }
+    .restaurant__like:hover restaurant__full-like {
+      opacity: 1; }
+    .restaurant__like:hover restaurant__like {
+      opacity: 0; }
+  .restaurant__full-like {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(0deg, #9356DC, #FF79DA);
+    opacity: 0;
+    z-index: -1;
+    transition: opacity 250ms; }
   @media screen and (min-width: 600px) {
     .restaurant {
       height: 34.1vw;
@@ -485,6 +581,8 @@ body {
   .menu__part {
     width: 100%; }
   .menu__command {
+    position: relative;
+    z-index: 1;
     background: linear-gradient(0deg, #9356DC, #FF79DA);
     padding: 4.8vw 5.87vw;
     border-radius: 8.53vw;
@@ -507,6 +605,21 @@ body {
     @media screen and (min-width: 1020px) {
       .menu__command {
         padding: 1.4vw 1.8vw; } }
+    .menu__command:hover::after {
+      opacity: 1; }
+    .menu__command::after {
+      content: "";
+      position: absolute;
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      box-shadow: 0 4vw 4vw #C4C4C4;
+      border-radius: 8.53vw;
+      background: linear-gradient(0deg, #8641d8, #ff60d3);
+      opacity: 0;
+      z-index: -1;
+      transition: opacity 250ms; }
   @media screen and (min-width: 600px) {
     .menu {
       flex-direction: row;
@@ -547,7 +660,17 @@ body {
       .menu__command {
         margin: 2.8vw auto; } }
 
+@keyframes apparition {
+  0% {
+    opacity: 0;
+    transform: translateY(2vw);
+    @media screen and (min-width: 600px) {
+      transform: translateY(1vw); } }
+  100% {
+    opacity: 1;
+    transform: translateY(0vw); } }
 .choice {
+  animation: apparition 450ms both;
   border-radius: 4vw;
   background-color: white;
   box-shadow: 0px 0.3em 0.5em #E2E2E2;
@@ -557,14 +680,38 @@ body {
   width: 100%;
   margin-bottom: 4vw;
   overflow: hidden; }
+  .choice:hover {
+    transform: scaleX(10%); }
+    .choice:hover .choice__select {
+      transform: translateX(0%); }
+  .choice--1 {
+    animation-delay: 225ms; }
+  .choice--2 {
+    animation-delay: 450ms; }
+  .choice--3 {
+    animation-delay: 675ms; }
+  .choice--4 {
+    animation-delay: 900ms; }
+  .choice--5 {
+    animation-delay: 1125ms; }
+  .choice--6 {
+    animation-delay: 1350ms; }
+  .choice--7 {
+    animation-delay: 1575ms; }
+  .choice--8 {
+    animation-delay: 1800ms; }
+  .choice--9 {
+    animation-delay: 2025ms; }
+  .choice--10 {
+    animation-delay: 2250ms; }
   .choice__description {
     display: flex;
     flex-direction: column;
     justify-content: flex-end;
     align-content: space-between;
     padding: 3.73vw 3.2vw;
-    width: 100%;
-    flex-wrap: wrap; }
+    flex-wrap: wrap;
+    transform: scaleX(100%); }
   .choice__heading {
     font-size: 4.7vw; }
     @media screen and (min-width: 600px) {
@@ -594,11 +741,13 @@ body {
         font-size: 1.2vw; } }
   .choice__select {
     position: relative;
-    left: 16vw;
+    width: 28%;
     height: 100%;
     background-color: #99E2D0;
     color: white;
-    transform: scaleX(16vw); }
+    transform-origin: 100% 50%;
+    transform: translateX(100%);
+    transition: transform 1000ms; }
   @media screen and (min-width: 600px) {
     .choice {
       height: 7vw;

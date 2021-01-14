@@ -1,8 +1,10 @@
 @import "./Utils/variables";
+@import "./Utils/mixins";
+@import "./Utils/keyframes";
 @import "./Base/font";
 @import "./Base/box-sizing";
-@import "./Utils/mixins";
 @import "./Layout/header";
 @import "./Layout/footer";
+@import "./Layout/loader";
 @import "./Pages/index";
 @import "./Pages/menu";

@@ -172,7 +172,7 @@
             grid-row-start: 1;
         }       
     }
-    @include tablet-responsive{
+    @include computer-responsive{
         padding: 4.6vw 1.6vw 5.6vw;
         grid-template-columns: repeat(4,1fr);
         grid-template-rows: min-content 1fr;
@@ -227,7 +227,28 @@
     }
     &__like{
         @include size(heart, 0.55, 0.27);
-        width:min-content;
+        position: relative;
+        z-index: 1;
+        &:hover{
+            restaurant__full-like{
+            opacity: 1;
+            }
+            restaurant__like{
+                opacity: 0;
+            }
+        }
+        width:3vw;
+    }
+    &__full-like{
+        position: absolute;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        left:0;
+        background: linear-gradient( 0deg, $color-primary, $color-secondary);
+        opacity: 0;
+        z-index:-1;
+        transition: opacity 250ms;
     }
     @include tablet-responsive{
         height: 34.1vw;
