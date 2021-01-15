@@ -250,7 +250,7 @@ body {
       left: 0;
       box-shadow: 0 3vw 3vw #C4C4C4;
       border-radius: 8.53vw;
-      background: linear-gradient(0deg, #8641d8, #ff60d3);
+      background: linear-gradient(0deg, #9b63df, #ff88de);
       opacity: 0;
       z-index: -1;
       transition: opacity 300ms; }
@@ -680,7 +680,7 @@ body {
       left: 0;
       box-shadow: 0 3vw 3vw #C4C4C4;
       border-radius: 8.53vw;
-      background: linear-gradient(0deg, #8641d8, #ff60d3);
+      background: linear-gradient(0deg, #9b63df, #ff88de);
       opacity: 0;
       z-index: -1;
       transition: opacity 300ms; }
