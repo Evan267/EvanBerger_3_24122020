@@ -23,6 +23,7 @@
     }
     @include tablet-responsive{
         height: 10vw;
+        box-shadow: 0 0.51vw 0.51vw #CFCFCF;
         &__logo{
             width: 25%;
             padding-top: 3.3vw;
@@ -35,6 +36,7 @@
     }
     @include computer-responsive{
         height: 6vw;
+        box-shadow: 0 0.25vw 0.25vw #CFCFCF;
         &__logo{
             width: 13%;
             padding-top: 2vw;

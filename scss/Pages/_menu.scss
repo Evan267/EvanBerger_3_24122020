@@ -5,15 +5,25 @@
 
 .image{
     width:100%;
+    height: 70vw;
+    overflow: hidden;
     img{
+        height: 100%;
         width:100%;
+        object-fit: cover;
+    }
+    @include tablet-responsive{
+        height:50vw;
+    }
+    @include computer-responsive{
+        height:30vw;
     }
 }
 
 .menu{
     position: relative;
-    top: -10.67vw;
-    border-radius: 10.67vw 10.67vw 0 0; 
+    top: -14vw;
+    border-radius: 14vw 14vw 0 0; 
     padding: 10.67vw 3.73vw 8vw;
     display: flex;
     flex-direction: column;
@@ -111,25 +121,12 @@
     }
 }
 
-@keyframes apparition{
-    0%{
-        opacity: 0;
-        transform: translateY(2vw);
-        @include tablet-responsive{
-            transform: translateY(1vw);
-        }
-    }
-    100%{
-        opacity: 1;
-        transform: translateY(0vw);
-    }
-}
 
-$anim-dur : 450ms;
-$anim-delay : $anim-dur /2;
+
+
 
 .choice{
-    animation: apparition $anim-dur both;
+    animation: apparition map-get($anim-dur, apparition) both;
     border-radius: 4vw;
     background-color: white;
     box-shadow: $box-shadow;
@@ -139,47 +136,76 @@ $anim-delay : $anim-dur /2;
     width:100%;
     margin-bottom: 4vw;
     overflow: hidden;
+    position: relative;
     &:hover {
-        transform: scaleX(10%);
         .choice__select{
             transform: translateX(0%); 
+            i{
+                transform: rotate(360deg);
+            }
+        }
+        .choice__description{
+            width: 75%;
         }
     }
     @for $i from 1 through 10 {
         &--#{$i} {
-            animation-delay: $anim-delay * $i;
+            animation-delay: map-get($anim-delay, apparition);
         }
     }
     &__description{
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        align-content: space-between;
-        padding: 3.73vw 3.2vw;
-        flex-wrap: wrap;
-        transform: scaleX(100%);
+        width: 100%;
+        display: grid;
+        grid-template-columns: 90% 10%;
+        grid-template-rows: auto;
+        padding: 3.73vw 5vw 3.73vw 3.2vw;
+        transition: width 1000ms ease-out;
     }
     &__heading{
         @include size(choice-heading, 0.3);
+        width: 100%;
+        grid-column-start: 1;
+        grid-column-end: 3;
+        grid-row: 1;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
     &__side{
+        position: relative;
         font-family: 'Roboto Thin';
         @include size(choice-side, 0.3);
         margin-top: auto;
+        width: 100%;
+        white-space:nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        grid-column-start: 1;
+        grid-column-end: 2;
+        grid-row: 2;
     }
     &__price{
         font-weight: bold;
         @include size(choice-side, 0.3);
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row: 2;
     }
     &__select{
-        position: relative;
-        width: 28%;
+        position: absolute;
+        right: 0;
+        width: 20%;
         height: 100%;
         background-color: $color-tertiary;
         color: white;
         transform-origin: 100% 50%;
         transform: translateX(100%); 
         transition: transform 1000ms;
+        i{
+            font-size: 5vw;
+            transition: transform 1000ms;
+            transform: rotate(0deg);
+        }
     }
     @include tablet-responsive{
         height: 7vw;

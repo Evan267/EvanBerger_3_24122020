@@ -30,9 +30,11 @@
     @include size(text,0.6,0.4);
     @include tablet-responsive{
         padding: 2.8vw 3.5vw;
+        box-shadow: 0 1.27vw 1.27vw #C4C4C4;
     }
     @include computer-responsive{
         padding: 1.4vw 1.8vw;
+        box-shadow: 0 0.64vw 0.64vw #C4C4C4;
     }
     &:hover{
         &::after{
@@ -46,12 +48,18 @@
         right: 0;
         bottom: 0;
         left:0;
-        box-shadow: 0 4vw 4vw #C4C4C4;
+        box-shadow: 0 3vw 3vw #C4C4C4;
         border-radius: 8.53vw;
         background: linear-gradient( 0deg, darken($color-primary, 5), darken($color-secondary, 5));
         opacity: 0;
         z-index:-1;
-        transition: opacity 250ms;
+        transition: opacity 300ms;
+        @include tablet-responsive{
+            box-shadow: 0 2vw 2vw #C4C4C4;
+        }
+        @include computer-responsive{
+            box-shadow: 0 1vw 1vw #C4C4C4;
+        }
     }
 }
 

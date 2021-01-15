@@ -3,14 +3,14 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    z-index: 2;
+    z-index: 5;
     top:0;
     right: 0;
     bottom: 0;
     left:0;
     height: 100vh;
     background-color: white;
-    animation: loader 2000ms both;
+    animation: loader map-get($anim-dur, loader) both;
     &__spinner{
         border-radius: 50%;
         width: 10vh;
@@ -20,6 +20,6 @@
         border-right: 1vh solid rgba($color-primary, 0.2);
         border-bottom: 1vh solid rgba($color-primary, 0.2);
         border-left: 1vh solid $color-primary;
-        animation: loader-spinner 500ms infinite;
+        animation: loader-spinner map-get($anim-dur, loader-spinner) infinite ease-in-out;
     }
 }

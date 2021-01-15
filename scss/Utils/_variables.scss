@@ -18,7 +18,8 @@ $font-size: (
     heading: 6.67vw,
     restaurant-link: 5vw,
     text: 4.27vw,
-    heart: 7.3vw, 
+    heart: 7.8vw, 
+    full-heart: 7.8vw,
     exp-number:3.2vw,
     exp-icon: 5vw,
     new: 3.5vw,
@@ -33,3 +34,13 @@ $breakpoints: (
     computer: 1020px,
 );
 
+
+
+$anim-dur : (
+    loader : 2000ms,
+    loader-spinner : 500ms,
+    apparition: 450ms,
+);
+$anim-delay : (
+    apparition: map-get($anim-dur, apparition) * 0.5,
+    );

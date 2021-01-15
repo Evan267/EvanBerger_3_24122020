@@ -191,12 +191,16 @@
     border-radius: 4vw;
     box-shadow: $box-shadow;
     position: relative;
-    background-color: white;
     overflow: hidden;
+    background-color: white;
     &__image{
         width: 100%;
         height: 70%;
         object-fit: cover;
+        object-position: 50% 100%;
+        &[alt="Restaurant La note enchantée"]{
+            object-position: 50% 60%;
+        }
     }
     &__new{
         position: absolute;
@@ -209,16 +213,18 @@
         @include size(new, 0.5, 0.25);
     }
     figcaption{
-        display: flex;
-        flex-direction: column;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-content: space-between;
-        height: 27%;
-        padding: 0 6.4vw 0 3.73vw;
+        position: absolute;
+        bottom: 0;
+        left:0;
+        right:0;
+        background-color: white;
+        display: grid;
+        grid-template-columns: 90% 10%;
+        grid-template-rows: repeat(2, min-content);
+        height: min-content;
+        padding: 5.5% 6.4vw 5.5% 3.73vw;
     }
     &__heading{
-        width: max-content;
         @include size(restaurant-link, 0.5, 0.25);
     }
     &__location{
@@ -226,35 +232,50 @@
         font-family: 'Roboto Thin';
     }
     &__like{
+        grid-column-start: 2;
+        grid-column-end: 3;
+        grid-row-start: 1;
+        grid-row-end: 3;
         @include size(heart, 0.55, 0.27);
         position: relative;
-        z-index: 1;
+        z-index: 2;
         &:hover{
-            restaurant__full-like{
+            .restaurant__full-like{
             opacity: 1;
             }
-            restaurant__like{
-                opacity: 0;
-            }
         }
-        width:3vw;
     }
     &__full-like{
+        background-color: white;
         position: absolute;
         top: 0;
+        left: 0;
         right: 0;
         bottom: 0;
-        left:0;
-        background: linear-gradient( 0deg, $color-primary, $color-secondary);
         opacity: 0;
-        z-index:-1;
         transition: opacity 250ms;
+        i{
+            background:-moz-linear-gradient(180deg, $color-primary, $color-secondary); 
+            background: -webkit-linear-gradient(180deg, $color-primary, $color-secondary); 
+            background: linear-gradient(180deg, $color-primary, $color-secondary);
+            -webkit-background-clip: text;
+            -moz-background-clip: text;
+            background-clip: text;
+            -webkit-text-fill-color:transparent;
+            display: inline;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            @include size(full-heart, 0.55, 0.27);
+            opacity: 1;
+        }
     }
     @include tablet-responsive{
         height: 34.1vw;
         border-radius: 2vw;
         figcaption{
-            padding: 0 3vw 0 1.5vw;
+            padding: 5% 3vw 5% 1.5vw;
         }
         &__new{
             top: 1.7vw;
@@ -267,7 +288,7 @@
         height: 17.05vw;
         border-radius: 1vw;
         figcaption{
-            padding: 0 1.5vw 0 0.75vw;
+            padding: 5.5% 1.5vw 5.5% 0.75vw;
         }
         &__new{
             top: 0.85vw;
