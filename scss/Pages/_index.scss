@@ -267,7 +267,7 @@
             left: 0;
             right: 0;
             bottom: 0;
-            @include size(full-heart, 0.55, 0.27);
+            @include size(heart, 0.55, 0.27);
             opacity: 1;
         }
     }
