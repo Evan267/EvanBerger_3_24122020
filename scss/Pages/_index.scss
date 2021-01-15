@@ -155,7 +155,7 @@
     background-color: $background-grey;
     display: grid;
     grid-template-columns: auto;
-    grid-template-rows: 1;
+    grid-template-rows: 1fr;
     row-gap: 4.8vw;
     column-gap: 2.4vw;
     &__heading{
@@ -260,7 +260,6 @@
             background: linear-gradient(180deg, $color-primary, $color-secondary);
             -webkit-background-clip: text;
             -moz-background-clip: text;
-            background-clip: text;
             -webkit-text-fill-color:transparent;
             display: inline;
             top: 0;

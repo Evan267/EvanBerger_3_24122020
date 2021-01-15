@@ -17,9 +17,7 @@
 @keyframes apparition {
   0% {
     opacity: 0;
-    transform: translateY(2vw);
-    @media screen and (min-width: 600px) {
-      transform: translateY(1vw); } }
+    transform: translateY(2vw); }
   100% {
     opacity: 1;
     transform: translateY(0vw); } }
@@ -58,8 +56,7 @@ body {
   width: 100%;
   box-shadow: 0 0.85vw 0.85vw #CFCFCF;
   background-color: white;
-  height: 17.33vw;
-  padding-top: auto; }
+  height: 17.33vw; }
   .header__logo {
     width: 46%;
     margin: auto;
@@ -381,7 +378,7 @@ body {
   background-color: rgba(255, 255, 255, 0.55);
   display: grid;
   grid-template-columns: auto;
-  grid-template-rows: 1;
+  grid-template-rows: 1fr;
   row-gap: 4.8vw;
   column-gap: 2.4vw; }
   .grid__heading {
@@ -501,7 +498,6 @@ body {
       background: linear-gradient(180deg, #9356DC, #FF79DA);
       -webkit-background-clip: text;
       -moz-background-clip: text;
-      background-clip: text;
       -webkit-text-fill-color: transparent;
       display: inline;
       top: 0;
@@ -565,13 +561,14 @@ body {
   padding: 10.67vw 3.73vw 8vw;
   display: flex;
   flex-direction: column;
-  align-items: top;
+  align-items: start;
   background-color: #F6F6F6; }
   .menu__restaurant, .menu__subtitle, .menu__green-line {
     margin-left: 1.6vw; }
   .menu__restaurant {
     display: flex;
     justify-content: space-between;
+    align-items: center;
     margin-bottom: 1vw;
     margin-right: 6.4vw;
     width: 90%; }
@@ -585,15 +582,15 @@ body {
       .menu__heading {
         font-size: 3.285vw; } }
   .menu__like {
-    font-size: 9vw;
+    font-size: 7.8vw;
     position: relative;
     z-index: 2; }
     @media screen and (min-width: 600px) {
       .menu__like {
-        font-size: 6.3vw; } }
+        font-size: 5.07vw; } }
     @media screen and (min-width: 1020px) {
       .menu__like {
-        font-size: 3.6vw; } }
+        font-size: 3.51vw; } }
     .menu__like:hover .menu__full-like {
       opacity: 1; }
   .menu__full-like {
@@ -618,14 +615,14 @@ body {
       left: 0;
       right: 0;
       bottom: 0;
-      font-size: 9vw;
+      font-size: 7.8vw;
       opacity: 1; }
       @media screen and (min-width: 600px) {
         .menu__full-like i {
-          font-size: 6.3vw; } }
+          font-size: 5.07vw; } }
       @media screen and (min-width: 1020px) {
         .menu__full-like i {
-          font-size: 3.6vw; } }
+          font-size: 3.51vw; } }
   .menu__subtitle {
     font-family: 'Roboto Thin';
     font-size: 4.27vw;
@@ -702,7 +699,8 @@ body {
       border-radius: 6.4vw 6.4vw 0 0;
       padding: 6.4vw 3.2vw 4.8vw; }
       .menu__restaurant {
-        margin-bottom: 4vw; }
+        margin-bottom: 2vw;
+        margin-right: 2vw; }
       .menu__command {
         padding-right: 7.7vw;
         padding-left: 7.7vw; }
