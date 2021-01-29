@@ -52,6 +52,10 @@ body {
   background-color: #EAEAEA;
   padding: 0px; }
 
+button {
+  border: none;
+  background-color: rgba(255, 255, 255, 0); }
+
 .header {
   width: 100%;
   box-shadow: 0 0.85vw 0.85vw #CFCFCF;
@@ -535,7 +539,7 @@ body {
         padding: 0.35vw 0.8vw;
         border-radius: 0.12vw; } }
 
-.restaurant {
+.menu-page {
   background-color: #F6F6F6;
   overflow-y: scroll; }
 
